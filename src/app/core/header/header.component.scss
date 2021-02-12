@@ -1,0 +1,17 @@
+.header-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .header-nav {
+        a {
+            margin: 0 10px;
+        }
+    }
+    
+    .header-action {
+        .action {
+            margin: 0 10px;
+        }
+    }
+}

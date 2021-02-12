@@ -1,0 +1,27 @@
+<div class="auto-list">
+    <p>Marketplace for buyers and sellers who love cars</p>
+    <p>Find your next car here</p>
+
+    <app-filter (filtersChange)="filtersChange($event)"></app-filter>
+
+    <span>Continue your search</span>
+    <div class="autos filter">
+        <app-auto *ngFor="let item of _filtersItems" [data]="item" [isKm]='true' [isPrice]='true'></app-auto>
+    </div>
+
+    <div class="autos">
+        <app-best-sell></app-best-sell>
+    </div>
+
+    <div class="autos">
+        <app-popular-autos></app-popular-autos>
+    </div>
+
+    <div class="autos">
+        <app-auto-type></app-auto-type>
+    </div>
+
+    <div class="autos">
+        <app-popular-marks></app-popular-marks>
+    </div>
+</div>

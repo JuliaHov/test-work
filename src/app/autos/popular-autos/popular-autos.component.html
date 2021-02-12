@@ -1,0 +1,4 @@
+<span>Popular Cars in Canada</span>
+<div class="cars">
+    <app-auto *ngFor="let item of Autos" [data]="item" [isModel]='true' [isYear]="true" [isLogo]="true"></app-auto>
+</div>

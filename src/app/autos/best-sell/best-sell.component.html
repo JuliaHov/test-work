@@ -1,0 +1,36 @@
+<div class="nav-items">
+    <div class="best-selling" (click)="selectedTab = bestSellerModel.mostSelling"
+        [class.active]="selectedTab === bestSellerModel.mostSelling">
+        <span>Most Selling</span>
+    </div>
+    <div class="best-selling" (click)="selectedTab = bestSellerModel.bestselling"
+        [class.active]="selectedTab === bestSellerModel.bestselling">
+        <span>Best Selling</span>
+    </div>
+    <div class="best-selling" (click)="selectedTab = bestSellerModel.mostVisited"
+        [class.active]="selectedTab === bestSellerModel.mostVisited">
+        <span>Most Visited</span>
+    </div>
+</div>
+
+<ng-container [ngSwitch]="selectedTab">
+    <ng-container *ngSwitchDefault>
+        <div class="cars">
+            <app-auto *ngFor="let item of BestSelling" [data]="item" [isModel]='true' [isYear]="true" [isLogo]="true">
+            </app-auto>
+        </div>
+
+    </ng-container>
+    <ng-container *ngSwitchCase="bestSellerModel.bestselling">
+        <div class="cars">
+            <app-auto *ngFor="let item of MostSelling" [data]="item" [isModel]='true' [isYear]="true" [isLogo]="true">
+            </app-auto>
+        </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="bestSellerModel.mostVisited">
+        <div class="cars">
+            <app-auto *ngFor="let item of MostVisited" [data]="item" [isModel]='true' [isYear]="true" [isLogo]="true">
+            </app-auto>
+        </div>
+    </ng-container>
+</ng-container>

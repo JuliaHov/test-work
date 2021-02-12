@@ -1,0 +1,14 @@
+.auto-list {
+    text-align: center;
+    margin-top: 20px;
+
+    .autos {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+
+        &.filter {
+            margin-bottom: 100px;
+        }
+    }
+}

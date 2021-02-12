@@ -1,0 +1,73 @@
+<footer class="footer" style="display: flex;">
+    <div class="footer__item">
+        <a class="footer__nav-link" href="#" style="display: block;">
+            auto.market
+        </a>
+       <img src ="/assets/icons/instagram.svg">
+       <img src ="/assets/icons/fb.svg">
+       <img src ="/assets/icons/twitter.svg">
+    </div>
+
+    <div style="display: flex;">
+        <div style="display: flex; flex-direction: column; margin: 0 40px;">
+            <a class="footer__nav-link" href="#" style="display: block;">
+                Home
+            </a>
+            <a class="footer__nav-link" href="#" style="display: block;">
+                Buy car
+            </a>
+            <a class="footer__nav-link" href="#" style="display: block;">
+                Sell car 
+            </a>
+            <a class="footer__nav-link" href="#" style="display: block;">
+                Dealers
+            </a>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin: 0 40px;">
+            <a class="footer__nav-link" href="#" style="display: block;">
+                Home
+            </a>
+            <a class="footer__nav-link" href="#" style="display: block;">
+                Buy car
+            </a>
+            <a class="footer__nav-link" href="#" style="display: block;">
+                Sell car 
+            </a>
+            <a class="footer__nav-link" href="#" style="display: block;">
+                Dealers
+            </a>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin: 0 40px;">
+            <a class="footer__nav-link" href="#" style="display: block;">
+                Home
+            </a>
+            <a class="footer__nav-link" href="#" style="display: block;">
+                Buy car
+            </a>
+            <a class="footer__nav-link" href="#" style="display: block;">
+                Sell car 
+            </a>
+            <a class="footer__nav-link" href="#" style="display: block;">
+                Dealers
+            </a>
+        </div>
+    </div>
+
+    <div class="languages-chooice-content">
+        <span [class]="'language-icon ' + selectedLanguage"></span>
+        <div>
+          <button mat-button [matMenuTriggerFor]="language" class="language-button">
+            {{ selectedLanguage }}<mat-icon>expand_more</mat-icon>
+          </button>
+          <mat-menu #language="matMenu" class="languages-selected-menu">
+            <button mat-menu-item *ngFor="let lang of languages" (click)="selectLanguage(lang.id)">
+              <span [class]="'language-icon ' + lang.id"></span>
+              {{ lang.name }}
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+
+</footer>

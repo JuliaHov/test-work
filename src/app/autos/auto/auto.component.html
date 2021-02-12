@@ -1,0 +1,12 @@
+<div class="auto">
+    <img *ngIf="isLogo" class="logo" src ="{{data.logo}}">
+    <div class="image">
+       <img src ="{{data.img}}">
+    </div>
+    <p *ngIf="isYear" class="year">{{data.year}}</p>
+    <p *ngIf="isMark" class="mark">{{data.mark}}</p>
+    <p *ngIf="isModel">{{data.model}}</p>
+    <p *ngIf="isKm" class="km">{{data.km}} KM</p>
+    <p *ngIf="isPrice" class="price">${{data.price}}</p>
+    <p *ngIf="isType" class="type">{{data.type}}</p>
+</div>

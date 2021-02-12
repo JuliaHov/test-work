@@ -1,0 +1,21 @@
+<div class="filter">
+  <mat-form-field [hideRequiredMarker]="'auto'">
+    <mat-select [formControl]="countryControl">
+      <mat-option *ngFor="let item of countries" [value]="item">
+        {{item}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field [hideRequiredMarker]="'auto'">
+    <mat-select [formControl]="brandControl">
+      <mat-option *ngFor="let item of brands" [value]="item">
+        {{item}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <input type="number" step="100" min="0"  [formControl]="priceControl">
+
+  <button>SEARCH</button>
+</div>

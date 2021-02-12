@@ -1,0 +1,54 @@
+.auto {
+  height: auto;
+  width: 100px;
+  border: 1px solid;
+  margin: 10px;
+  position: relative;
+
+  .image {
+    height: 80px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 15px;
+    width: 20px;
+  }
+
+  .km {
+    color: gray;
+    font-size: 10px;
+  }
+
+  .year {
+    color: gray;
+    font-size: 10px;
+    text-align: start;
+    margin-left: 10px;
+  }
+
+  .type {
+    font-size: 12px;
+  }
+
+  .mark {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  p {
+    margin: 0;
+  }
+}
